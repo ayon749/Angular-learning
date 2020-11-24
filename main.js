@@ -1,15 +1,6 @@
-var Point = /** @class */ (function () {
-    function Point() {
-    }
-    Point.prototype.draw = function () {
-        console.log("X is : " + this.x + " and Y is : " + this.y);
-    };
-    Point.prototype.getDistance = function (another) {
-        //..................
-    };
-    return Point;
-}());
-var point = new Point();
-point.x = 1;
-point.y = 2;
-point.draw();
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var like_component_1 = require("./like.component");
+var component = new like_component_1.likeComponent(10, true);
+component.OnClick();
+console.log("LikeCount: " + component.LikeCount + ", IsLiked: " + component.IsLike);

@@ -1,23 +1,6 @@
-class Point {
-   
-    constructor(private x?:number, private y?:number){
-        this.x=x;
-        this.y=y;
-    }
-    draw()
-    {
-        console.log("X is : "+this.x +" and Y is : "+this.y);
+import {likeComponent}from './like.component';
 
-    }
-
-    getDistance(another:Point){
-        //..................
-    }
-}
-
-let point=new Point(1,2);
-
-
-
-point.draw();
+let component=new likeComponent(10,true);
+component.OnClick();
+console.log(`LikeCount: ${component.LikeCount}, IsLiked: ${component.IsLike}`);
 
