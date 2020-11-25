@@ -8,14 +8,13 @@ import { CoursesService } from './courses.service';
 @Component({
     selector:'courses',
     template:`
-    <div (click)="onClick()">
-   
-    <button [style.backgroundColor]="isActive ? 'blue':'white'" (click)="onSave($event)">
-    Save
-    </button> 
-   
-    </div>
-    <input [(ngModel)]="email" (keyUp.enter)="onKeyUp()"/>
+    {{Course.title | uppercase }}<br/>
+    {{Course.rating |number:'2.2-2'}}<br/>
+    {{Course.students |number}}<br/>
+    {{Course.price |currency:'AUD':true:'3.2-2'}}<br/>
+    {{Course.date |date:'shortDate'}}<br/>
+
+    
     `
 
     
@@ -24,19 +23,11 @@ import { CoursesService } from './courses.service';
 
 export class CoursesComponent{
    
-       isActive=true;
-       onClick(){
-           console.log("Div is in use.");
-       }
-       onSave($event)
-       {
-           $event.stopPropagation();
-           console.log("Button is clicked",$event);
-        
-        
-        }
-        email="me@domain.com"
-        onKeyUp(){
-            console.log(this.email);
-        }
+      Course={
+          title: "The complete angular course",
+          rating: 4.9754,
+          students:3075,
+          price:190.95,
+          date:new Date(2016,3,1)
+      }
 }
