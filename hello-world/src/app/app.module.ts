@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SummaryPipe } from './summary.pipe';
 
 
 
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     AppComponent,
     CoursesComponent,
     CourseComponent,
+    SummaryPipe
    
   ],
   imports: [
