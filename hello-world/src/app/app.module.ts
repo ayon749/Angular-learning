@@ -1,5 +1,6 @@
 import { CoursesService } from './courses.service';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms'
 import { CourseComponent } from './course/course.component';
 import { CoursesComponent } from './courses.component';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [CoursesService],
   bootstrap: [AppComponent]
