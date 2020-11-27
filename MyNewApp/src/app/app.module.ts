@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 
@@ -19,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
+    UserComponent,
+    DetailComponent,
     
   ],
   imports: [
